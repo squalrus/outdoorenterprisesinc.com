@@ -1,0 +1,372 @@
+@import url(http://fonts.googleapis.com/css?family=Quattrocento);
+
+@charset "utf-8";
+/* Layout CSS
+ * Author: Chad Schulz
+ * Date: 11/05/11
+ *
+    GLOBAL ELEMENTS
+---------------------------------------------------------- */
+body {
+  background:#FFFFE9 url(../img/bg2.jpg) repeat-x 0px 0px;
+  color:#333;
+  font-family:'Quattrocento', serif;
+  font-size:14px;
+}
+a:link, a:visited {
+  color:#00AF56;
+  text-decoration:none;
+}
+a:active, a:hover {
+  color:#00AF56;
+  text-decoration:underline;
+}
+h1 {
+  color:#008a45;
+  font-size:26px;
+  font-weight:normal;
+  margin:0px 0px 17px 0px;
+  text-align:center;
+  text-shadow:1px 1px 1px #CCC;
+  text-transform:lowercase;
+}
+h2 { 
+  color:white;
+  font-size:30px;
+  font-weight:normal;
+  margin:0 0 4px 0;
+  padding:0;
+}
+p {
+  line-height:18px;
+}
+#main {
+  background:url(../img/bg_body.png) repeat-y 0px 0px;
+  padding:0px 7px 0px;
+  width:960px;
+}
+#content_container { padding:20px; }
+input[type="text"], .textbox, input[type="textarea"], .textarea {
+  clear:both;
+  color:#888;
+  font-size:16px;
+  padding:3px 2px;
+  width:500px;
+}
+input[type="text"], .textbox {
+}
+input[type="textarea"], .textarea {
+  height:150px;
+}
+a:link#button, a:visited#button, input[type="submit"]#button, .submit#button {
+  border:none;
+  color:#fff;
+  display:block;
+  font-family:'Quattrocento', serif; /* input[type="submit"] */
+  font-size:16px;
+  height:35px;
+  line-height:35px;
+  text-align:center;
+  text-decoration:none;
+  text-shadow:0px 1px 1px #00af56;
+}
+a:active#button, a:hover#button, input[type="submit"]:hover#button, .submit:hover#button {
+  background-position:0px -35px;
+  text-decoration:underline;
+}
+.btn175 {
+  background:#00d167 url(../img/btn_175.png) no-repeat;
+  width:175px;
+}
+.btn125 {
+  background:#00d167 url(../img/btn_125.png) no-repeat;
+  width:125px;
+}
+/* ------------------------------------------------------- */
+
+/* HEADER/NAVIGATION ELEMENTS
+---------------------------------------------------------- */
+header {
+  background:url(../img/bg_header.png) no-repeat 0px 10px;
+  overflow:hidden;
+  padding:0px 7px 0px;
+  width:960px;
+}
+header #button {
+  float:right;
+  margin:45px 25px 0px 0px;
+}
+#logo {
+  margin:0px 0px 0px 15px;
+}
+#container {
+  margin:0px auto;
+  padding-top:20px;
+  width:974px;
+}
+#menu {
+  background:#00542A url(../img/bg_menu.jpg) repeat-x 0px 0px;
+  border-right:1px solid #004321;
+  height:40px;
+  list-style:none;
+  margin:10px 0px 0px 0px;
+  padding:0px;
+  width:959px;
+}
+#menu li {
+  float:left;
+  margin:0px;
+  padding:0px;
+}
+#menu li a:link, #menu li a:visited {
+  border-left:1px solid #004321;
+  color:#FFF;
+  display:block;
+  font-size:16px;
+  line-height:40px;
+  margin:0px;
+  padding:0px 30px;
+  text-decoration:none;
+}
+#menu li a:active, #menu li a:hover { text-decoration:underline; }
+/* ------------------------------------------------------- */
+
+/* SLIDESHOW ELEMENTS
+---------------------------------------------------------- */
+#slides {
+  background:url(../img/bg_body.png) repeat-y 0px 0px;
+  height:328px;
+  padding:0px 7px 0px;
+  width:960px;
+}
+.pagination {
+  height:28px;
+  list-style:none;
+  margin:0px auto;
+  padding:0px;
+  text-align:center;
+  width:120px;
+}
+.pagination li {
+  display:block;
+  float:left;
+}
+.pagination li a {
+  background:url(../img/pagination.jpg) no-repeat 0px 0px;
+  display:block;
+  height:13px;
+  overflow:hidden;
+  margin:7px 4px;
+  padding:0px;
+  text-indent:-9999px;
+  width:14px;
+}
+.pagination li.current a { background:url(../img/pagination.jpg) no-repeat 0px -13px; }
+/* ------------------------------------------------------- */
+
+/* GALLERY ELEMENTS
+---------------------------------------------------------- */
+.main_slide {
+  display:block; 
+  height:300px;
+  list-style:none;
+  margin:0;
+  overflow:hidden;
+  padding:0;
+  width:960px;
+}
+.main_slide #slide_image {
+  display:block; 
+  height:300px;
+  margin:0;
+  padding:0;
+  position:relative;
+  width:960px;
+}
+.main_slide .overlay { 
+  background:url(../img/bg_slide.png) repeat 0px 0px;
+  color:white;
+  display:block;
+  left:0px;
+  margin:0;
+  padding:20px;
+  position:absolute;
+  top:25px;
+  width:500px;
+}
+.main_slide p { 
+  color:white;
+  margin:0;
+  padding:0;
+}
+.gallery a {
+  display:block;
+  float:left; 
+  height:100px; 
+  width:160px
+}
+.gallery img {
+  border:0px;
+  display:block;
+  float:left;
+  padding:0;
+  margin:0;
+}
+.gallery .gallery_thumb {
+  border-top:1px solid #fff; 
+  display:block; 
+  float:left; 
+  height:100px; 
+  position:relative;
+  width:160px
+}
+.gallery .gallery_thumb .enlarge {
+  background: url(../img/bg_slide.png) repeat 0px 0px;
+  color:#fff;
+  display:block;
+  font-size:20px;
+  height:25px;
+  left:135px;
+  line-height:24px;
+  padding:0px;
+  position:absolute;
+  text-align:center;
+  text-decoration:none;
+  top:75px;
+  width:25px;
+}
+#gallery_selector {
+  height:40px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  width:960px;
+}
+#gallery_selector li {
+  float:left;
+}
+#gallery_selector a.section_button:link,
+#gallery_selector a.section_button:visited {
+  background-color:#EFEFEF;
+  color:#333;
+  display:block;
+  font-size:16px;
+  height:40px !important;
+  line-height:40px;
+  text-align:center;
+  text-decoration:none;
+}
+#gallery_selector a.section_button:active,
+#gallery_selector a.section_button:hover,
+#gallery_selector a.section_button.current {
+  background-color:#DDD;
+  text-decoration:underline;
+}
+.section_container { display:none; }
+/* ------------------------------------------------------- */
+
+/* TESTIMONIAL ELEMENTS
+---------------------------------------------------------- */
+#testimonial {
+  background:#EFEFEF;
+  border-bottom:1px solid #DDD;
+  border-top:1px solid #DDD;
+  color:#666;
+  margin:40px 0 0 0;
+  padding:15px 40px;
+  width:880px;
+}
+#testimonial p {
+  color:#888;
+  font-size:14px;
+  margin:0;
+}
+#testimonial p .author {
+  font-weight:bold;
+  margin-left:30px;
+}
+#testimonial #button {
+  float:right;
+  margin:0px 0px 0px 40px;
+}
+/* ------------------------------------------------------- */
+
+/* PAGE-SPECIFIC ELEMENTS
+---------------------------------------------------------- */
+/* HOME */
+#callouts {
+  font-size:13px;
+  list-style:none;
+  margin:0px;
+  padding:0px;
+}
+#callouts li.last { border-right:none; }
+#callouts li {
+  border-right:1px dashed #CCC;
+  display:block;
+  float:left;
+  margin:0px;
+  padding:20px;
+  width:279px;
+}
+#callouts li img { float:right; }
+/* ABOUT */
+.page_about img { float:left; }
+.page_about p { float:left; margin-left:20px; width:666px; }
+/* TESTIMONIALS */
+.page_testimonials p {
+  border-bottom:1px solid #DDD;
+  color:#888;
+  font-size:14px;
+  margin:0;
+  padding:20px 0;
+  width:920px;
+}
+.page_testimonials p .author {
+  color:#888;
+  font-weight:bold;
+}
+/* CONTACT */
+.page_contact ul {
+  list-style:none;
+  margin:20px 50px;
+  padding:0;
+  width:500px;
+}
+.page_contact li { margin:0 0 10px 0; }
+.page_contact li * {
+  clear:both;
+  float:left;
+}
+.page_contact #button { float:right; }
+.page_contact label.error {
+  color:#C00;
+  margin:4px 0;
+}
+/* ------------------------------------------------------- */
+
+/* FOOTER ELEMENTS
+---------------------------------------------------------- */
+footer {
+  background:url(../img/bg_footer.png) no-repeat 0px bottom;
+  color:#999;
+  height:100px;
+  overflow:hidden;
+  margin:0 0 20px 0;
+  padding:40px 27px 0px;
+  width:920px;
+}
+footer .navigation {
+  float:left;
+  width:600px;
+}
+footer .contact_info {
+  float:right;
+  text-align:right;
+  width:300px;
+}
+footer p {
+  margin:0;
+  padding:0;
+}
+/* ------------------------------------------------------- */

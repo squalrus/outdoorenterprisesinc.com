@@ -11,8 +11,12 @@ app.set('view engine', 'ejs');
 // app.use(express.compress());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
+app.get('/', function(req, res) {
+    res.render('index');
+});
+
+app.get('/:id/', function(req, res) {
+    res.render(req.params.id);
 });
 
 app.listen(app.get('port'), function () {
