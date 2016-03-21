@@ -11,6 +11,11 @@ app.set('view engine', 'ejs');
 // app.use(express.compress());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(function(req, res) {
+    res.status(400);
+    res.render('404');
+});
+
 app.get('/', function(req, res) {
     res.render('index');
 });
