@@ -2,7 +2,8 @@ var express = require('express'),
     path = require('path'),
     app = express(),
 
-    testimonials = require('./data/testimonials');
+    testimonials = require('./data/testimonials'),
+    plantings = require('./data/plantings');
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
@@ -24,6 +25,17 @@ app.get('/', function(req, res) {
 
 app.get('/about', function(req, res) {
     res.render('about', { 'testimonial': randomTestimonial() });
+});
+
+app.get('/testimonials', function(req, res) {
+    res.render('testimonials', { 'testimonials': testimonials });
+});
+
+app.get('/plantings', function(req, res) {
+    res.render('plantings', {
+    	'plantings': plantings,
+    	'testimonial': randomTestimonial()
+    });
 });
 
 app.listen(app.get('port'), function () {

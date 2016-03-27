@@ -1,9 +1,5 @@
 var testimonials = [
     {
-        'quote': 'Thank you for everything Rob. We thoroughly enjoyed working with you and your crew.',
-        'author': 'Margie'
-    },
-    {
         'quote': 'As I walked in this morning to see your completed work on our garden area, I was most impressed with the esthetic quality as well as the fine workmanship that you and your partner did finishing off this area.',
         'author': 'Jack'
     },

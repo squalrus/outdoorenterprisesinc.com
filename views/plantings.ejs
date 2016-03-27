@@ -1,0 +1,26 @@
+<% title = "Plantings" %>
+
+<% include _header %>
+
+<div id="main" role="main">
+    <ul class="main_slide">
+        <li>
+            <div id="slide_image" style="background:url(img/gallery/35685065-88ff-ff55-c360-2b623ca00347.jpg) center;">
+                <div class="overlay">
+                    <h2>Plantings</h2>
+                    <p>Our plant material is purchased from only Wisconsin suppliers. There is always care given to the use of quality soils and amendments for prolonged plant life.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="clearfix"></div>
+    <div class="gallery">
+        <% plantings.forEach(function (planting) { %>
+            <a href="img/gallery/<%= planting %>.jpg" rel="lightbox[plantings]"><div class="gallery_thumb" style="background:url(img/gallery/THUMB_<%= planting %>.jpg) center;"><span class="enlarge">+</span></div></a>
+        <% }); %>
+    </div>
+    <div class="clearfix"></div>
+    <% include _testimonial %>
+</div><!-- end of #main -->
+
+<% include _footer %>

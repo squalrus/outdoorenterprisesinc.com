@@ -1,0 +1,15 @@
+<% title = "Testimonials" %>
+
+<% include _header %>
+
+<div id="main" role="main">
+    <div id="content_container" class="clearfix page_testimonials">
+        <% testimonials.forEach(function (testimonial) { %>
+            <p>"<%= testimonial.quote %>"<br /><span class="author"><%= testimonial.author %></span></p>
+        <% }); %>
+    </div><!-- end of #content_container -->
+    <div class="clearfix"></div>
+
+</div><!-- end of #main -->
+
+<% include _footer %>
