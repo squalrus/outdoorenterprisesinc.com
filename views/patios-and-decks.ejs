@@ -1,0 +1,26 @@
+<% title = "Patios & Decks" %>
+
+<% include _header %>
+
+<div id="main" role="main">
+    <ul class="main_slide">
+        <li>
+            <div id="slide_image" style="background:url(img/gallery/800fe6c3-94cc-2e8f-c83d-50e2f4fd6b9b.jpg) center;">
+                <div class="overlay">
+                    <h2>Patios &amp; Decks</h2>
+                    <p>We install most types of patios to include brick, combined multi-sized pavers both tumbled and non tumbled, and many varieties of natural stone. We use only the finest edging and follow the strictest guidelines for the base preparation and installation of the paving surface.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="clearfix"></div>
+    <div class="gallery">
+        <% patios.forEach(function (patio) { %>
+            <a href="img/gallery/<%= patio %>.jpg" rel="lightbox[patios-and-decks]"><div class="gallery_thumb" style="background:url(img/gallery/THUMB_<%= patio %>.jpg) center;"><span class="enlarge">+</span></div></a>
+            <% }); %>
+    </div>
+    <div class="clearfix"></div>
+    <% include _testimonial %>
+</div><!-- end of #main -->
+
+<% include _footer %>

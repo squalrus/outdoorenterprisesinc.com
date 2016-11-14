@@ -1,0 +1,26 @@
+<% title = "Retaining Walls" %>
+
+<% include _header %>
+
+<div id="main" role="main">
+ <ul class="main_slide">
+    <li>
+        <div id="slide_image" style="background:url(img/gallery/77a315b2-02f8-cd88-26fd-8b9d41670de8.jpg) center;">
+            <div class="overlay">
+                <h2>Retaining Walls</h2>
+                <p>We install retaining walls using many manufacturers segmental block units, as well as natural stone. These walls must follow guidelines for installation, especially as they become taller. How they are backfilled, and what they are backfilled with are also important factors in their longevity. There are many ways to accomplish holding back soil, along with being beautiful at the same time.</p>
+            </div>
+        </div>
+    </li>
+</ul>
+<div class="clearfix"></div>
+<div class="gallery">
+    <% walls.forEach(function (wall) { %>
+        <a href="img/gallery/<%= wall %>.jpg" rel="lightbox[retaining-walls]"><div class="gallery_thumb" style="background:url(img/gallery/THUMB_<%= wall %>.jpg) center;"><span class="enlarge">+</span></div></a>
+        <% }); %>
+</div>
+<div class="clearfix"></div>
+<% include _testimonial %>
+</div><!-- end of #main -->
+
+<% include _footer %>

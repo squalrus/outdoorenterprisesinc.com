@@ -1,0 +1,39 @@
+<% title = "Patios & Decks" %>
+
+<% include _header %>
+
+<div id="main" role="main">
+ <ul class="main_slide">
+    <li>
+        <div id="slide_image" style="background:url(img/gallery/d2610bd4-a6e0-ac5a-6576-0a7642f889e5.jpg) center;">
+            <div class="overlay">
+                <h2>Community Projects</h2>
+                <p>In 2009 we designed and completed the Mosinee Veterans Park in addition we have also designed and completed the first two phases on the Rothschild Veterans Memorial over the past three years. A third phase of this memorial will be installed in the near future. We have also been involved in several other commercial projects in our past 29 years in buisiness in the Wausau area.</p>
+            </div>
+        </div>
+    </li>
+</ul>
+<div class="clearfix"></div>
+<ul id="gallery_selector">
+    <li style="width:50%"><a href="#" class="section_button current" id="btnRothschildVeteransPark">Rothschild Veterans Park</a></li>
+    <li style="width:50%"><a href="#" class="section_button" id="btnMosineeVeteransMemorial">Mosinee Veterans Memorial</a></li>
+</ul>
+<div class="gallery">
+    <div id="RothschildVeteransPark" class="section_container" style="display: block;">
+        <% community.rothschildveteranspark.forEach(function (item) { %>
+            <a href="img/gallery/<%= item %>.jpg" rel="lightbox[rothschildveteranspark]"><div class="gallery_thumb" style="background:url(img/gallery/THUMB_<%= item %>.jpg) center;"><span class="enlarge">+</span></div></a>
+        <% }); %>
+        <div class="clearfix"></div>
+    </div>
+    <div id="MosineeVeteransMemorial" class="section_container" style="display: none;">
+        <% community.mosineeveteransmemorial.forEach(function (item) { %>
+            <a href="img/gallery/<%= item %>.jpg" rel="lightbox[mosineeveteransmemorial]"><div class="gallery_thumb" style="background:url(img/gallery/THUMB_<%= item %>.jpg) center;"><span class="enlarge">+</span></div></a>
+        <% }); %>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<% include _testimonial %>
+</div><!-- end of #main -->
+
+<% include _footer %>

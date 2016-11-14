@@ -1,4 +1,4 @@
-var plantings = [
+module.exports = [
     'aef97561-33fd-5971-a6c6-8c728ea77fc6',
     '644a66b0-9b97-3d13-d917-12f3e70eaf20',
     '6d8306ed-3de5-6115-3d66-a1713490a802',
@@ -10,5 +10,3 @@ var plantings = [
     '349be884-132d-59d4-944a-251a8fb3b4f2',
     'cfd6ef6f-f195-4fa7-9d2c-8fc8942a46f4'
 ];
-
-module.exports = plantings;

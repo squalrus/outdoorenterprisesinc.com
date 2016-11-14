@@ -1,0 +1,39 @@
+<% title = "Special Projects" %>
+
+<% include _header %>
+
+<div id="main" role="main">
+<ul class="main_slide">
+    <li>
+        <div id="slide_image" style="background:url(img/gallery/9e3ac00c-584e-e061-79c8-45132664c3d7.jpg) center;">
+            <div class="overlay">
+                <h2>Special Projects</h2>
+                <p>Outdoor Enterprises Inc. is always excited to work with you on original special projects.</p>
+            </div>
+        </div>
+    </li>
+</ul>
+<div class="clearfix"></div>
+<ul id="gallery_selector">
+    <li style="width:50%"><a href="#" class="section_button current" id="btnWaterFeatures">Water Features</a></li>
+    <li style="width:50%"><a href="#" class="section_button" id="btnHardscapes">Hardscapes</a></li>
+</ul>
+<div class="gallery">
+    <div id="WaterFeatures" class="section_container" style="display: block;">
+        <% projects.waterfeatures.forEach(function (item) { %>
+            <a href="img/gallery/<%= item %>.jpg" rel="lightbox[waterfeatures]"><div class="gallery_thumb" style="background:url(img/gallery/THUMB_<%= item %>.jpg) center;"><span class="enlarge">+</span></div></a>
+        <% }); %>
+        <div class="clearfix"></div>
+    </div>
+    <div id="Hardscapes" class="section_container" style="display: none;">
+        <% projects.hardscapes.forEach(function (item) { %>
+            <a href="img/gallery/<%= item %>.jpg" rel="lightbox[hardscapes]"><div class="gallery_thumb" style="background:url(img/gallery/THUMB_<%= item %>.jpg) center;"><span class="enlarge">+</span></div></a>
+        <% }); %>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="clearfix"></div>
+<% include _testimonial %>
+</div><!-- end of #main -->
+
+<% include _footer %>

@@ -19,16 +19,18 @@ jQuery(function(){
 
 /* Community Projects Switcher */
 jQuery(document).ready(function() {
-	jQuery('#MosineeVeteransMemorial').hide();	
-	jQuery('#RothschildVeteransPark').show();			   
-						   
-	jQuery('#btnRothschildVeteransPark').click(function() {
+	jQuery('#MosineeVeteransMemorial').hide();
+	jQuery('#RothschildVeteransPark').show();
+
+	jQuery('#btnRothschildVeteransPark').click(function(e) {
+		e.preventDefault();
 		jQuery('#RothschildVeteransPark').show();
 		jQuery('#MosineeVeteransMemorial').hide();
 		jQuery('#btnRothschildVeteransPark').addClass("current");
 		jQuery('#btnMosineeVeteransMemorial').removeClass("current");
 	});
-	jQuery('#btnMosineeVeteransMemorial').click(function() {
+	jQuery('#btnMosineeVeteransMemorial').click(function(e) {
+		e.preventDefault();
 		jQuery('#RothschildVeteransPark').hide();
 		jQuery('#MosineeVeteransMemorial').show();
 		jQuery('#btnRothschildVeteransPark').removeClass("current");
@@ -38,16 +40,18 @@ jQuery(document).ready(function() {
 
 /* Special Projects Switcher */
 jQuery(document).ready(function() {
-	jQuery('#Hardscapes').hide();	
-	jQuery('#WaterFeatures').show();			   
-						   
-	jQuery('#btnWaterFeatures').click(function() {
+	jQuery('#Hardscapes').hide();
+	jQuery('#WaterFeatures').show();
+
+	jQuery('#btnWaterFeatures').click(function(e) {
+		e.preventDefault();
 		jQuery('#WaterFeatures').show();
 		jQuery('#Hardscapes').hide();
 		jQuery('#btnWaterFeatures').addClass("current");
 		jQuery('#btnHardscapes').removeClass("current");
 	});
-	jQuery('#btnHardscapes').click(function() {
+	jQuery('#btnHardscapes').click(function(e) {
+		e.preventDefault();
 		jQuery('#WaterFeatures').hide();
 		jQuery('#Hardscapes').show();
 		jQuery('#btnWaterFeatures').removeClass("current");
