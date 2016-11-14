@@ -2,6 +2,8 @@ var express = require('express'),
     path = require('path'),
     app = express(),
 
+    inquiryAddress = process.env.INQUIRY_ADDRESS,
+
     testimonials = require('./data/testimonials'),
     plantings = require('./data/plantings');
 
@@ -15,27 +17,31 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 function randomTestimonial() {
-	var index = Math.floor(Math.random() * testimonials.length);
-	return testimonials[index];
+    var index = Math.floor(Math.random() * testimonials.length);
+    return testimonials[index];
 }
 
 app.get('/', function(req, res) {
     res.render('index', { 'testimonial': randomTestimonial() });
 });
 
-app.get('/about', function(req, res) {
+app.get('/about/', function(req, res) {
     res.render('about', { 'testimonial': randomTestimonial() });
 });
 
-app.get('/testimonials', function(req, res) {
+app.get('/testimonials/', function(req, res) {
     res.render('testimonials', { 'testimonials': testimonials });
 });
 
-app.get('/plantings', function(req, res) {
+app.get('/plantings/', function(req, res) {
     res.render('plantings', {
-    	'plantings': plantings,
-    	'testimonial': randomTestimonial()
+        'plantings': plantings,
+        'testimonial': randomTestimonial()
     });
+});
+
+app.get('/test/', function(req, res) {
+    res.send(inquiryAddress);
 });
 
 app.listen(app.get('port'), function () {
