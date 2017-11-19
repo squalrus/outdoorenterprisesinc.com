@@ -3,58 +3,46 @@
 */
 
 /* Homepage slides */
-jQuery(function(){
-	jQuery('#slides').slides({
-		preload: true,
-		preloadImage: '../img/loading.gif',
-		play: 5000,
-		pause: 2500,
-		hoverPause: true,
-		effect: 'fade',
-		crossfade: true,
-		slideSpeed: 350,
-		fadeSpeed: 500
-	});
+$(function () {
+    $('#slides').slidesjs({
+        width: 960,
+        height: 300,
+        start: 1,
+        navigation: {
+            active: false
+        },
+        pagination: {
+            active: true,
+            effect: 'fade'
+        },
+        play: {
+            active: false
+        },
+        effect: {
+            fade: {
+                speed: 300,
+                crossfade: true
+            }
+        }
+    });
 });
 
-/* Community Projects Switcher */
-jQuery(document).ready(function() {
-	jQuery('#MosineeVeteransMemorial').hide();
-	jQuery('#RothschildVeteransPark').show();
+(function () {
+    function switchButton(e) {
+        var $button = $(this),
+            id = $button.attr('href'),
+            $container = $(id),
+            $buttons = $('.section_button'),
+            $containers = $('.section_container');
 
-	jQuery('#btnRothschildVeteransPark').click(function(e) {
-		e.preventDefault();
-		jQuery('#RothschildVeteransPark').show();
-		jQuery('#MosineeVeteransMemorial').hide();
-		jQuery('#btnRothschildVeteransPark').addClass("current");
-		jQuery('#btnMosineeVeteransMemorial').removeClass("current");
-	});
-	jQuery('#btnMosineeVeteransMemorial').click(function(e) {
-		e.preventDefault();
-		jQuery('#RothschildVeteransPark').hide();
-		jQuery('#MosineeVeteransMemorial').show();
-		jQuery('#btnRothschildVeteransPark').removeClass("current");
-		jQuery('#btnMosineeVeteransMemorial').addClass("current");
-	});
-});
+        e.preventDefault();
 
-/* Special Projects Switcher */
-jQuery(document).ready(function() {
-	jQuery('#Hardscapes').hide();
-	jQuery('#WaterFeatures').show();
+        $containers.hide();
+        $buttons.removeClass('current');
 
-	jQuery('#btnWaterFeatures').click(function(e) {
-		e.preventDefault();
-		jQuery('#WaterFeatures').show();
-		jQuery('#Hardscapes').hide();
-		jQuery('#btnWaterFeatures').addClass("current");
-		jQuery('#btnHardscapes').removeClass("current");
-	});
-	jQuery('#btnHardscapes').click(function(e) {
-		e.preventDefault();
-		jQuery('#WaterFeatures').hide();
-		jQuery('#Hardscapes').show();
-		jQuery('#btnWaterFeatures').removeClass("current");
-		jQuery('#btnHardscapes').addClass("current");
-	});
-});
+        $container.show();
+        $button.addClass('current');
+    }
+
+    $('body').on('click', '.section_button', switchButton);
+})();

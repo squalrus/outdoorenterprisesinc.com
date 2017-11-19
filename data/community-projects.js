@@ -20,5 +20,8 @@ module.exports = {
         '5cea668a-0c9e-d47f-fd09-649c6c4643bd',
         'd2610bd4-a6e0-ac5a-6576-0a7642f889e5',
         '3b07a230-8792-19f0-d4ec-27dcc84ccff4'
+    ],
+    'wausauwomenscommunity': [
+        'wausauwomenscommunity01'
     ]
 };

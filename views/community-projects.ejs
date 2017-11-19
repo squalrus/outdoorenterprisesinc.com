@@ -15,8 +15,9 @@
 </ul>
 <div class="clearfix"></div>
 <ul id="gallery_selector">
-    <li style="width:50%"><a href="#" class="section_button current" id="btnRothschildVeteransPark">Rothschild Veterans Park</a></li>
-    <li style="width:50%"><a href="#" class="section_button" id="btnMosineeVeteransMemorial">Mosinee Veterans Memorial</a></li>
+    <li style="width:33.33%"><a href="#RothschildVeteransPark" class="section_button current">Rothschild Veterans Park</a></li>
+    <li style="width:33.33%"><a href="#MosineeVeteransMemorial" class="section_button">Mosinee Veterans Memorial</a></li>
+    <li style="width:33.33%"><a href="#WausauWomensCommunity" class="section_button">Wausau Women's Community</a></li>
 </ul>
 <div class="gallery">
     <div id="RothschildVeteransPark" class="section_container" style="display: block;">
@@ -28,6 +29,12 @@
     <div id="MosineeVeteransMemorial" class="section_container" style="display: none;">
         <% community.mosineeveteransmemorial.forEach(function (item) { %>
             <a href="img/gallery/<%= item %>.jpg" rel="lightbox[mosineeveteransmemorial]"><div class="gallery_thumb" style="background:url(img/gallery/THUMB_<%= item %>.jpg) center;"><span class="enlarge">+</span></div></a>
+        <% }); %>
+        <div class="clearfix"></div>
+    </div>
+    <div id="WausauWomensCommunity" class="section_container" style="display: none;">
+        <% community.wausauwomenscommunity.forEach(function (item) { %>
+            <a href="img/gallery/<%= item %>.jpg" rel="lightbox[wausauwomenscommunity]"><div class="gallery_thumb" style="background:url(img/gallery/THUMB_<%= item %>.jpg) center;"><span class="enlarge">+</span></div></a>
         <% }); %>
         <div class="clearfix"></div>
     </div>
