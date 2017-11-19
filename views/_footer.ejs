@@ -20,21 +20,23 @@
         </footer>
     </div><!-- end of #container -->
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-
     <!-- start scripts -->
-    <script defer src="js/libs/slides.min.jquery.js"></script>
-    <script defer src="js/plugins.js"></script>
-    <script defer src="js/script.js"></script>
-
-    <script src="js/libs/prototype.js"></script>
-    <script src="js/libs/scriptaculous.js?load=effects,builder"></script>
-    <script src="js/libs/lightbox.js"></script>
-    <script src="http://jzaefferer.github.com/jquery-validation/jquery.validate.js"></script>
+    <script src="js/lib/jquery-3.2.1.min.js"></script>
+    <script src="js/lib/jquery.slides.min.js"></script>
+    <script src="js/lib/lightbox.min.js"></script>
+    <script src="js/script.js"></script>
     <!-- end scripts -->
 
-    <script> // Google Analytics
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-31444187-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
     </script>
 </body>
 </html>

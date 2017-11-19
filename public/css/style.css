@@ -1,98 +1,372 @@
-/* HTML5 ✰ Boilerplate
- * ==|== normalize ==========================================================
- */
+@import url(http://fonts.googleapis.com/css?family=Quattrocento);
 
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-audio:not([controls]) { display: none; }
-[hidden] { display: none; }
-
-html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-body { margin: 0; font-size: 13px; line-height: 1.231; }
-body, button, input, select, textarea { font-family: sans-serif; color: #222; }
-
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
-
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
-a:focus { outline: thin dotted; }
-a:hover, a:active { outline: 0; }
-
-abbr[title] { border-bottom: 1px dotted; }
-b, strong { font-weight: bold; }
-blockquote { margin: 1em 40px; }
-dfn { font-style: italic; }
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-ins { background: #ff9; color: #000; text-decoration: none; }
-mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
-pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
-pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
-q { quotes: none; }
-q:before, q:after { content: ""; content: none; }
-small { font-size: 85%; }
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
-dd { margin: 0 0 0 40px; }
-nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
-img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
-svg:not(:root) { overflow: hidden; }
-figure { margin: 0; }
-
-form { margin: 0; }
-fieldset { border: 0; margin: 0; padding: 0; }
-label { cursor: pointer; }
-legend { border: 0; *margin-left: -7px; padding: 0; }
-button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
-button, input { line-height: normal; *overflow: visible; }
-table button, table input { *overflow: auto; }
-button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; }
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
-input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-textarea { overflow: auto; vertical-align: top; resize: vertical; }
-input:valid, textarea:valid {  }
-input:invalid, textarea:invalid { background-color: #f0dddd; }
-
-table { border-collapse: collapse; border-spacing: 0; }
-td { vertical-align: top; }
-
-/* ==|== non-semantic helper classes ======================================== */
-.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
-.ir br { display: none; }
-.hidden { display: none !important; visibility: hidden; }
-.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
-.invisible { visibility: hidden; }
-.clearfix:before, .clearfix:after { content: ""; display: table; }
-.clearfix:after { clear: both; }
-.clearfix { zoom: 1; }
-
-/* ==|== media queries ====================================================== */
-
-@media only screen and (min-width: 480px) {
+@charset "utf-8";
+/* Layout CSS
+ * Author: Chad Schulz
+ * Date: 11/05/11
+ *
+    GLOBAL ELEMENTS
+---------------------------------------------------------- */
+body {
+  background:#FFFFE9 url(../img/bg2.jpg) repeat-x 0px 0px;
+  color:#333;
+  font-family:'Quattrocento', serif;
+  font-size:14px;
 }
-
-@media only screen and (min-width: 768px) {
+a:link, a:visited {
+  color:#00AF56;
+  text-decoration:none;
 }
-
-/* ==|== print styles ======================================================= */
- 
-@media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
-  a, a:visited { text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; }
-  tr, img { page-break-inside: avoid; }
-  img { max-width: 100% !important; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }
+a:active, a:hover {
+  color:#00AF56;
+  text-decoration:underline;
 }
+h1 {
+  color:#008a45;
+  font-size:26px;
+  font-weight:normal;
+  margin:0px 0px 17px 0px;
+  text-align:center;
+  text-shadow:1px 1px 1px #CCC;
+  text-transform:lowercase;
+}
+h2 {
+  color:white;
+  font-size:30px;
+  font-weight:normal;
+  margin:0 0 4px 0;
+  padding:0;
+}
+p {
+  line-height:18px;
+}
+#main {
+  background:url(../img/bg_body.png) repeat-y 0px 0px;
+  padding:0px 7px 0px;
+  width:960px;
+}
+#content_container { padding:20px; }
+input[type="text"], .textbox, input[type="textarea"], .textarea {
+  clear:both;
+  color:#888;
+  font-size:16px;
+  padding:3px 2px;
+  width:500px;
+}
+input[type="text"], .textbox {
+}
+input[type="textarea"], .textarea {
+  height:150px;
+}
+a:link#button, a:visited#button, input[type="submit"]#button, .submit#button {
+  border:none;
+  color:#fff;
+  display:block;
+  font-family:'Quattrocento', serif; /* input[type="submit"] */
+  font-size:16px;
+  height:35px;
+  line-height:35px;
+  text-align:center;
+  text-decoration:none;
+  text-shadow:0px 1px 1px #00af56;
+}
+a:active#button, a:hover#button, input[type="submit"]:hover#button, .submit:hover#button {
+  background-position:0px -35px;
+  text-decoration:underline;
+}
+.btn175 {
+  background:#00d167 url(../img/btn_175.png) no-repeat;
+  width:175px;
+}
+.btn125 {
+  background:#00d167 url(../img/btn_125.png) no-repeat;
+  width:125px;
+}
+/* ------------------------------------------------------- */
+
+/* HEADER/NAVIGATION ELEMENTS
+---------------------------------------------------------- */
+header {
+  background:url(../img/bg_header.png) no-repeat 0px 10px;
+  overflow:hidden;
+  padding:0px 7px 0px;
+  width:960px;
+}
+header #button {
+  float:right;
+  margin:45px 25px 0px 0px;
+}
+#logo {
+  margin:0px 0px 0px 15px;
+}
+#container {
+  margin:0px auto;
+  padding-top:20px;
+  width:974px;
+}
+#menu {
+  background:#00542A url(../img/bg_menu.jpg) repeat-x 0px 0px;
+  border-right:1px solid #004321;
+  height:40px;
+  list-style:none;
+  margin:10px 0px 0px 0px;
+  padding:0px;
+  width:959px;
+}
+#menu li {
+  float:left;
+  margin:0px;
+  padding:0px;
+}
+#menu li a:link, #menu li a:visited {
+  border-left:1px solid #004321;
+  color:#FFF;
+  display:block;
+  font-size:16px;
+  line-height:40px;
+  margin:0px;
+  padding:0px 30px;
+  text-decoration:none;
+}
+#menu li a:active, #menu li a:hover { text-decoration:underline; }
+/* ------------------------------------------------------- */
+
+/* SLIDESHOW ELEMENTS
+---------------------------------------------------------- */
+#slides {
+  background:url(../img/bg_body.png) repeat-y 0px 0px;
+  height:328px;
+  padding:0px 7px 0px;
+  width:960px;
+}
+.slidesjs-pagination {
+  height:28px;
+  list-style:none;
+  margin:0px auto;
+  padding:0px;
+  text-align:center;
+  width:120px;
+}
+.slidesjs-pagination li {
+  display:block;
+  float:left;
+}
+.slidesjs-pagination li a {
+  background:url(../img/pagination.jpg) no-repeat 0px 0px;
+  display:block;
+  height:13px;
+  overflow:hidden;
+  margin:7px 4px;
+  padding:0px;
+  text-indent:-9999px;
+  width:14px;
+}
+.slidesjs-pagination li a.active { background:url(../img/pagination.jpg) no-repeat 0px -13px; }
+/* ------------------------------------------------------- */
+
+/* GALLERY ELEMENTS
+---------------------------------------------------------- */
+.main_slide {
+  display:block;
+  height:300px;
+  list-style:none;
+  margin:0;
+  overflow:hidden;
+  padding:0;
+  width:960px;
+}
+.main_slide #slide_image {
+  display:block;
+  height:300px;
+  margin:0;
+  padding:0;
+  position:relative;
+  width:960px;
+}
+.main_slide .overlay {
+  background:url(../img/bg_slide.png) repeat 0px 0px;
+  color:white;
+  display:block;
+  left:0px;
+  margin:0;
+  padding:20px;
+  position:absolute;
+  top:25px;
+  width:500px;
+}
+.main_slide p {
+  color:white;
+  margin:0;
+  padding:0;
+}
+.gallery a {
+  display:block;
+  float:left;
+  height:100px;
+  width:160px
+}
+.gallery img {
+  border:0px;
+  display:block;
+  float:left;
+  padding:0;
+  margin:0;
+}
+.gallery .gallery_thumb {
+  border-top:1px solid #fff;
+  display:block;
+  float:left;
+  height:100px;
+  position:relative;
+  width:160px
+}
+.gallery .gallery_thumb .enlarge {
+  background: url(../img/bg_slide.png) repeat 0px 0px;
+  color:#fff;
+  display:block;
+  font-size:20px;
+  height:25px;
+  left:135px;
+  line-height:24px;
+  padding:0px;
+  position:absolute;
+  text-align:center;
+  text-decoration:none;
+  top:75px;
+  width:25px;
+}
+#gallery_selector {
+  height:40px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  width:960px;
+}
+#gallery_selector li {
+  float:left;
+}
+#gallery_selector a.section_button:link,
+#gallery_selector a.section_button:visited {
+  background-color:#EFEFEF;
+  color:#333;
+  display:block;
+  font-size:16px;
+  height:40px !important;
+  line-height:40px;
+  text-align:center;
+  text-decoration:none;
+}
+#gallery_selector a.section_button:active,
+#gallery_selector a.section_button:hover,
+#gallery_selector a.section_button.current {
+  background-color:#DDD;
+  text-decoration:underline;
+}
+.section_container { display:none; }
+/* ------------------------------------------------------- */
+
+/* TESTIMONIAL ELEMENTS
+---------------------------------------------------------- */
+#testimonial {
+  background:#EFEFEF;
+  border-bottom:1px solid #DDD;
+  border-top:1px solid #DDD;
+  color:#666;
+  margin:40px 0 0 0;
+  padding:15px 40px;
+  width:880px;
+}
+#testimonial p {
+  color:#888;
+  font-size:14px;
+  margin:0;
+}
+#testimonial p .author {
+  font-weight:bold;
+  margin-left:30px;
+}
+#testimonial #button {
+  float:right;
+  margin:0px 0px 0px 40px;
+}
+/* ------------------------------------------------------- */
+
+/* PAGE-SPECIFIC ELEMENTS
+---------------------------------------------------------- */
+/* HOME */
+#callouts {
+  font-size:13px;
+  list-style:none;
+  margin:0px;
+  padding:0px;
+}
+#callouts li.last { border-right:none; }
+#callouts li {
+  border-right:1px dashed #CCC;
+  display:block;
+  float:left;
+  margin:0px;
+  padding:20px;
+  width:279px;
+}
+#callouts li img { float:right; }
+/* ABOUT */
+.page_about img { float:left; }
+.page_about p { float:left; margin-left:20px; width:666px; }
+/* TESTIMONIALS */
+.page_testimonials p {
+  border-bottom:1px solid #DDD;
+  color:#888;
+  font-size:14px;
+  margin:0;
+  padding:20px 0;
+  width:920px;
+}
+.page_testimonials p .author {
+  color:#888;
+  font-weight:bold;
+}
+/* CONTACT */
+.page_contact ul {
+  list-style:none;
+  margin:20px 50px;
+  padding:0;
+  width:500px;
+}
+.page_contact li { margin:0 0 10px 0; }
+.page_contact li * {
+  clear:both;
+  float:left;
+}
+.page_contact #button { float:right; }
+.page_contact label.error {
+  color:#C00;
+  margin:4px 0;
+}
+/* ------------------------------------------------------- */
+
+/* FOOTER ELEMENTS
+---------------------------------------------------------- */
+footer {
+  background:url(../img/bg_footer.png) no-repeat 0px bottom;
+  color:#999;
+  height:100px;
+  overflow:hidden;
+  margin:0 0 20px 0;
+  padding:40px 27px 0px;
+  width:920px;
+}
+footer .navigation {
+  float:left;
+  width:600px;
+}
+footer .contact_info {
+  float:right;
+  text-align:right;
+  width:300px;
+}
+footer p {
+  margin:0;
+  padding:0;
+}
+/* ------------------------------------------------------- */
