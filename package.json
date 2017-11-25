@@ -1,16 +1,24 @@
 {
-  "name": "outdoorenterprisesinc.com",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "dependencies": {
-    "ejs": "^2.4.1",
-    "express": "^4.13.4"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "outdoorenterprisesinc.com",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "dependencies": {
+        "ejs": "2.4.1",
+        "express": "4.13.4"
+    },
+    "devDependencies": {
+        "grunt": "1.0.1",
+        "grunt-contrib-clean": "1.1.0",
+        "grunt-contrib-copy": "1.0.0",
+        "grunt-contrib-less": "1.4.1",
+        "grunt-contrib-uglify": "3.1.0",
+        "grunt-contrib-watch": "1.0.0",
+        "stylelint": "8.2.0"
+    },
+    "scripts": {
+        "postinstall": "grunt build"
+    },
+    "author": "",
+    "license": "ISC"
 }
