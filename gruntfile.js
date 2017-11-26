@@ -1,5 +1,4 @@
-module.exports = function (grunt) {
-
+module.exports = function (grunt) { // eslint-disable-line func-names
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -26,8 +25,16 @@ module.exports = function (grunt) {
             }
         },
 
+        eslint: {
+            target: [
+                'app.js',
+                'gruntfile.js',
+                'js/script.js'
+            ]
+        },
+
         less: {
-            options:{
+            options: {
                 compress: true
             },
             files: {
@@ -35,10 +42,27 @@ module.exports = function (grunt) {
                     'less/font.less',
                     'less/lib/normalize.css',
                     'less/lib/lightbox.min.css',
-                    'less/style.less'
+                    'less/base.less',
+                    'less/header.less',
+                    'less/slideshow.less',
+                    'less/gallery.less',
+                    'less/testimonial.less',
+                    'less/style.less',
+                    'less/footer.less'
                 ],
-                dest: 'public/css/site.min.css',
+                dest: 'public/css/site.min.css'
             }
+        },
+
+        stylelint: {
+            options: {
+                configFile: '.stylelintrc',
+                failOnError: true,
+                syntax: 'less'
+            },
+            src: [
+                'less/*.less'
+            ]
         },
 
         uglify: {
@@ -58,6 +82,7 @@ module.exports = function (grunt) {
             scripts: {
                 files: [
                     '*.js',
+                    '*.eslintrc',
                     'data/*.js',
                     'js/**/*.js',
                     'less/**/*.less',
@@ -73,7 +98,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-eslint');
+    grunt.loadNpmTasks('grunt-stylelint');
 
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('build', ['clean', 'less', 'uglify', 'copy']);
+    grunt.registerTask('build', ['stylelint', 'eslint', 'clean', 'less', 'uglify', 'copy']);
 };
