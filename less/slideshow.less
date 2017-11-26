@@ -1,0 +1,35 @@
+#slides {
+    background: url(../images/bg_body.png) repeat-y 0 0;
+    height: 328px;
+    padding: 0 7px;
+    width: 960px;
+}
+
+.slidesjs-pagination {
+    height: 28px;
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    width: 120px;
+
+    li {
+        display: block;
+        float: left;
+
+        a {
+            background: url(../images/pagination.jpg) no-repeat 0 0;
+            display: block;
+            height: 13px;
+            overflow: hidden;
+            margin: 7px 4px;
+            padding: 0;
+            text-indent: -9999px;
+            width: 14px;
+
+            &.active {
+                background: url(../images/pagination.jpg) no-repeat 0 -13px;
+            }
+        }
+    }
+}

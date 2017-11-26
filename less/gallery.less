@@ -1,0 +1,113 @@
+.main_slide {
+    display: block;
+    height: 300px;
+    list-style: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 960px;
+
+    #slide_image {
+        display: block;
+        height: 300px;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        width: 960px;
+    }
+
+    .overlay {
+        background: url(../images/bg_slide.png) repeat 0 0;
+        color: #ffffff;
+        display: block;
+        left: 0;
+        margin: 0;
+        padding: 20px;
+        position: absolute;
+        top: 25px;
+        width: 500px;
+    }
+
+    p {
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.gallery {
+    a {
+        display: block;
+        float: left;
+        height: 100px;
+        width: 160px;
+    }
+
+    img {
+        border: 0;
+        display: block;
+        float: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    .gallery_thumb {
+        border-top: 1px solid #ffffff;
+        display: block;
+        float: left;
+        height: 100px;
+        position: relative;
+        width: 160px;
+
+        .enlarge {
+            background: url(../images/bg_slide.png) repeat 0 0;
+            color: #ffffff;
+            display: block;
+            font-size: 20px;
+            height: 25px;
+            left: 135px;
+            line-height: 24px;
+            padding: 0;
+            position: absolute;
+            text-align: center;
+            text-decoration: none;
+            top: 75px;
+            width: 25px;
+        }
+    }
+}
+
+#gallery_selector {
+    height: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 960px;
+
+    li {
+        float: left;
+    }
+
+    a.section_button:link,
+    a.section_button:visited {
+        background-color: #efefef;
+        color: #333333;
+        display: block;
+        font-size: 16px;
+        height: 40px !important;
+        line-height: 40px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    a.section_button:active,
+    a.section_button:hover,
+    a.section_button.current {
+        background-color: #dddddd;
+        text-decoration: underline;
+    }
+}
+
+.section_container {
+    display: none;
+}

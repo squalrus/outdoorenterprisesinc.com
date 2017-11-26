@@ -1,10 +1,7 @@
-/* Author: Chad Schulz
-   Date: 11/14/11
-*/
+/* global jQuery */
 
-/* Homepage slides */
-$(function () {
-    $('#slides').slidesjs({
+(function init($) {
+    var slideOpt = {
         width: 960,
         height: 300,
         start: 1,
@@ -24,10 +21,12 @@ $(function () {
                 crossfade: true
             }
         }
-    });
-});
+    };
 
-(function () {
+    function initSlides() {
+        $('#slides').slidesjs(slideOpt);
+    }
+
     function switchButton(e) {
         var $button = $(this),
             id = $button.attr('href'),
@@ -44,5 +43,6 @@ $(function () {
         $button.addClass('current');
     }
 
+    $(initSlides);
     $('body').on('click', '.section_button', switchButton);
-})();
+})(jQuery);
