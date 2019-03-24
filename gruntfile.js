@@ -2,7 +2,7 @@ module.exports = function (grunt) { // eslint-disable-line func-names
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        clean: ['public'],
+        clean: ['dist'],
 
         copy: {
             main: {
@@ -11,14 +11,14 @@ module.exports = function (grunt) { // eslint-disable-line func-names
                         expand: true,
                         cwd: 'less',
                         src: 'images/*',
-                        dest: 'public',
+                        dest: 'dist',
                         filter: 'isFile'
                     },
                     {
                         expand: true,
                         cwd: 'img',
                         src: '**/*',
-                        dest: 'public/images/',
+                        dest: 'dist/images/',
                         filter: 'isFile'
                     }
                 ]
@@ -28,16 +28,16 @@ module.exports = function (grunt) { // eslint-disable-line func-names
         ejs: {
             compile: {
                 files: {
-                    'public/index.html': ['views/index.ejs'],
-                    'public/about/index.html': ['views/about.ejs'],
-                    'public/community-projects/index.html': ['views/community-projects.ejs'],
-                    'public/contact/index.html': ['views/contact.ejs'],
-                    'public/patios-and-decks/index.html': ['views/patios-and-decks.ejs'],
-                    'public/plantings/index.html': ['views/plantings.ejs'],
-                    'public/retaining-walls/index.html': ['views/retaining-walls.ejs'],
-                    'public/special-projects/index.html': ['views/special-projects.ejs'],
-                    'public/testimonials/index.html': ['views/testimonials.ejs'],
-                    'public/404.html': ['views/404.ejs']
+                    'dist/index.html': ['views/index.ejs'],
+                    'dist/about/index.html': ['views/about.ejs'],
+                    'dist/community-projects/index.html': ['views/community-projects.ejs'],
+                    'dist/contact/index.html': ['views/contact.ejs'],
+                    'dist/patios-and-decks/index.html': ['views/patios-and-decks.ejs'],
+                    'dist/plantings/index.html': ['views/plantings.ejs'],
+                    'dist/retaining-walls/index.html': ['views/retaining-walls.ejs'],
+                    'dist/special-projects/index.html': ['views/special-projects.ejs'],
+                    'dist/testimonials/index.html': ['views/testimonials.ejs'],
+                    'dist/404.html': ['views/404.ejs']
                 },
                 options: {
                     data: {
@@ -79,7 +79,7 @@ module.exports = function (grunt) { // eslint-disable-line func-names
                     'less/style.less',
                     'less/footer.less'
                 ],
-                dest: 'public/css/site.min.css'
+                dest: 'dist/css/site.min.css'
             }
         },
 
@@ -97,7 +97,7 @@ module.exports = function (grunt) { // eslint-disable-line func-names
         uglify: {
             my_target: {
                 files: {
-                    'public/js/site.min.js': [
+                    'dist/js/site.min.js': [
                         'js/lib/jquery-3.2.1.min.js',
                         'js/lib/jquery.slides.min.js',
                         'js/lib/lightbox.min.js',
