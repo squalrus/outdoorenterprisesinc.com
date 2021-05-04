@@ -4,6 +4,6 @@
         "indent": ["error", 4],
         "wrap-iife": ["error", "inside"],
         "one-var": ["error", "always"],
-        "linebreak-style": ["error", "windows"]
+        "linebreak-style": ["warn", "windows"]
     }
 }
