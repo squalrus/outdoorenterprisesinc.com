@@ -1,3 +1,5 @@
+'use strict';
+
 module.exports = function (grunt) { // eslint-disable-line func-names
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -31,7 +33,6 @@ module.exports = function (grunt) { // eslint-disable-line func-names
                     'dist/index.html': ['views/index.ejs'],
                     'dist/about/index.html': ['views/about.ejs'],
                     'dist/community-projects/index.html': ['views/community-projects.ejs'],
-                    'dist/contact/index.html': ['views/contact.ejs'],
                     'dist/patios-and-decks/index.html': ['views/patios-and-decks.ejs'],
                     'dist/plantings/index.html': ['views/plantings.ejs'],
                     'dist/retaining-walls/index.html': ['views/retaining-walls.ejs'],

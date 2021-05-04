@@ -1,5 +1,7 @@
 /* global jQuery */
 
+'use strict';
+
 (function init($) {
     var slideOpt = {
         width: 960,
