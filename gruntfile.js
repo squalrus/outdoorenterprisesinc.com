@@ -30,15 +30,16 @@ module.exports = function (grunt) { // eslint-disable-line func-names
         ejs: {
             compile: {
                 files: {
-                    'dist/index.html': ['views/index.ejs'],
+                    'dist/404.html': ['views/404.ejs'],
                     'dist/about/index.html': ['views/about.ejs'],
                     'dist/community-projects/index.html': ['views/community-projects.ejs'],
+                    'dist/contact/index.html': ['views/contact.ejs'],
+                    'dist/index.html': ['views/index.ejs'],
                     'dist/patios-and-decks/index.html': ['views/patios-and-decks.ejs'],
                     'dist/plantings/index.html': ['views/plantings.ejs'],
                     'dist/retaining-walls/index.html': ['views/retaining-walls.ejs'],
                     'dist/special-projects/index.html': ['views/special-projects.ejs'],
-                    'dist/testimonials/index.html': ['views/testimonials.ejs'],
-                    'dist/404.html': ['views/404.ejs']
+                    'dist/testimonials/index.html': ['views/testimonials.ejs']
                 },
                 options: {
                     data: {
